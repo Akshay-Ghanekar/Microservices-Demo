@@ -1,0 +1,32 @@
+package com.question.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.question.entity.Question;
+import com.question.repository.QuestionRepository;
+
+public class QuestionManagerImpl implements QuestionManager {
+
+	@Autowired
+	private QuestionRepository questionRepository;
+	@Override
+	public Question create(Question quiz) {
+		
+		return questionRepository.save(quiz);
+	}
+
+	@Override
+	public List<Question> get() {
+		
+		return questionRepository.findAll();
+	}
+
+	@Override
+	public Question getById(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

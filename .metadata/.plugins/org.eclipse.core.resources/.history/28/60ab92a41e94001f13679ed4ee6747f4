@@ -1,0 +1,10 @@
+package com.quiz.service;
+
+import com.quiz.entities.Quiz;
+
+public interface QuizManager {
+	Quiz create(Quiz quiz);
+	List<Quiz> get();
+	
+	Quiz getById(long id);
+	}
